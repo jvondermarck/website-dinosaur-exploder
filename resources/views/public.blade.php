@@ -1,14 +1,17 @@
 @extends('layouts.app')
 
-@section('title','Dino Exploder - Article')
+@section('title','Article')
 
 @section('main')
 	@parent
 	<h5>
 		Welcome to the article page
 	</h5>
+	@if(session()->get('user') == null) {
+		<p>You can signin <a href="{{ route('signin') }}">here</a> to add more article.</p><br>
+	}
+	@endif
 	
-	<p>You can signin <a href="{{ route('signin') }}">here</a> to add more article.</p><br>
 @endsection
 
 @section('article')
@@ -19,7 +22,7 @@
 					<h4 class="card-title">{{ $art->titre }}</h4>
 					<!-- le contenu -->
 					<p class="card-text">{{ $art->phrase }}</p>
-					<p class="card-text">{{ $art->contenu }}</p>
+					<p class="card-text">{!! $art->contenu !!}</p>
 					<p class="btn btn-primary">Author : {{ $art->auteur }}</p>
 				</div>
 		</div>

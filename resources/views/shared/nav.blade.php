@@ -1,11 +1,15 @@
 <link rel="stylesheet" href="{{ URL::asset('css/styles.css') }}" />
 
 <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
-  <a class="navbar-brand" href="{{ route('home') }}">Dinosaur Exploder</a>
+  {{-- <a class="navbar-brand" href="{{ route('home') }}">Dinosaur Exploder</a> --}}
+  <a class="navbar-brand" href="{{ route('home') }}">
+    <img src="{{ asset('img/background.png') }}" width="30" height="30" class="d-inline-block align-top" alt="">
+    Dinosaur Exploder
+  </a>
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-   <div class="collapse navbar-collapse w-100 order-1 order-md-0 dual-collapse2" id="navbarSupportedContent">
+   <div class="collapse navbar-collapse w-100 order-1 order-md-0 dual-collapse2" style="margin-left: 40px;" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
           <li class="{{ Route::is('home') ? 'nav-item active font-weight-bold' : 'nav-item' }}">
             <a class="nav-link" href="{{ route('home') }}">Home</a>
@@ -13,6 +17,10 @@
         
           <li class="{{ Route::is('giveLastestArticle') ? 'nav-item active font-weight-bold' : 'nav-item' }}">
             <a class="nav-link" href="{{ route('giveLastestArticle') }}">Public article</a>
+          </li>
+
+          <li class="{{ Route::is('about') ? 'nav-item active font-weight-bold' : 'nav-item' }}">
+            <a class="nav-link" href="{{ route('about') }}">About</a>
           </li>
       </ul>
     </div>

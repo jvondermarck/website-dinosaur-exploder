@@ -20,6 +20,8 @@ use App\Http\Controllers\CommentController;
 | Public routing */
 // Route::get('/', [UserController::class,'signin']);
 Route::get('/', function () { return view('home'); })->name('home');
+Route::get('about', function () { return view('about'); })->name('about');
+
 Route::get('signin', [UserController::class,'signin'])->name('signin');
 Route::post('authenticate', [UserController::class,'authenticate'])->name('authenticate');
 Route::get('signup', [UserController::class,'signup'])->name('signup');

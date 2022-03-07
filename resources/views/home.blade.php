@@ -14,11 +14,12 @@
         <main role="main" style="padding-top: 20px;">
             <section class="jumbotron text-center">
                 <div class="container">
-                <h1 class="jumbotron-heading">Dinosaur Exploder</h1>
-                <p class="lead text-muted">Dinosaur Exploder is a free, open source video game written in Java and is inspired by classic shoot em' ups such as asteroids.</p>
-                <p>
-                    <a href="https://github.com/dylan-power/dinosaur-exploder" class="btn btn-primary my-2">Our GitHub</a>
-                </p>
+                    <img class="card-img-top" style="width: 15rem;" src="{{ asset('img/background.png') }}" alt="Card image cap">
+                    <h1 class="jumbotron-heading">Dinosaur Exploder</h1>
+                    <p class="lead text-muted">Dinosaur Exploder is a free, open source video game written in Java and is inspired by classic shoot em' ups such as asteroids.</p>
+                    <p>
+                        <a href="https://github.com/dylan-power/dinosaur-exploder" class="btn btn-primary my-2">Our GitHub</a>
+                    </p>
                 </div>
             </section>
         
@@ -36,13 +37,13 @@
         </main>
 	</body>
     <footer class="text-muted">
-        <div class="container">
-          <p class="float-right">
-            <a href="#">Back to top</a>
-          </p>
-          <p>Dinosaur Exploder is an Open-Source project hosted on GitHub. Feel free to contribute to our project !</p>
-          <p>New as a contributor ? <a href="https://github.com/dylan-power/dinosaur-exploder">Visit our GitHub</a> or read our <a href="https://github.com/dylan-power/dinosaur-exploder/blob/main/CONTRIBUTING.md">contribution guidelines</a>.</p>
-        </div>
-    </footer>
-</html>
+		<div class="container">
+			<p class="float-right">
+				<a href="#">Back to top</a>
+			</p>
+			<p>Dinosaur Exploder is an Open-Source project hosted on GitHub. Feel free to contribute to our project !</p>
+			<p>New as a contributor ? <a href="https://github.com/dylan-power/dinosaur-exploder">Visit our GitHub</a> or read our <a href="https://github.com/dylan-power/dinosaur-exploder/blob/main/CONTRIBUTING.md">contribution guidelines</a>.</p>
+		</div>
+	</footer>
+</html> 
 

@@ -4,12 +4,12 @@
 
 @section('main')
 	@parent
-	<main class="form-signin">
+	<main class="form-signin" style="margin: 10px">
 		<form action="{{ route('authenticate') }}" method="post">
 			@csrf
 			<div class="form-floating">
 				<label for="login">Login</label>      
-				<input class="form-control" type="text" id="login" name="login" required autofocus><br>
+				<input class="form-control" autocomplete="off" type="text" id="login" name="login" required autofocus><br>
 			</div>
 			<div class="form-floating">
 				<label for="password">Password</label>

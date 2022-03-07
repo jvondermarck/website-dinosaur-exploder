@@ -14,13 +14,13 @@
 
 @section('article')
 	@foreach ($article as $art)
-			<div class="card" style="width:300px; margin:10px" class="row">
+			<div class="card" style="width:300px; margin:10px; max-height:300px;" class="row">
 			<!-- le corps -->
 				<div class="card-body">
 					<h4 class="card-title">{{ $art->titre }}</h4>
 					<!-- le contenu -->
 					<p class="card-text">{{ $art->phrase }}</p>
-					<p class="card-text">{{ $art->contenu }}</p>
+					<p class="card-text">{!! $art->contenu !!}</p> 
                     <p class="btn btn-outline-success">Published :
 						@if( $art->statut == 1)
 							Yes
