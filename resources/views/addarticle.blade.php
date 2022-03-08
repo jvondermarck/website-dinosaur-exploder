@@ -1,62 +1,40 @@
-@extends('layouts.app')
+@extends('layouts.app2')
 
 @section('title','Add an article')
 
-@section('main')
-	@parent
-    <div class="container mt-3">
-        <form class="form-signin" action="{{ route('addOneArticle') }}" method="post">
-            @csrf
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text w-100" id="title">Title</span>
-                </div>      
-                <input type="text" id="title" name="title" required>
-            </div><br>
+@section('body')
+	@parent            
+    <form action="{{ route('addOneArticle') }}" method="post">
+        @csrf
+        <div class="container align-items-center justify-content-md-center">
+            <div class="row align-items-center justify-content-md-center">
+                <div class="form-group col-sm-6">
+                    <label for="title">Title :</label>
+                    <input type="text" id="title" name="title" class="form-control" required>
+                </div>
+                <div class="form-group col-sm-6">
+                    <label for="catchy">Catchy sentence :</label>
+                    <input type="text" id="catchy" name="catchy" class="form-control" required>
+                </div>
+                <div class="form-group col">
+                    <label for="context">Content :</label>
+                    <textarea class="form-control col" id="context" name="context"></textarea>
+                </div>
+            </div>
+        </div>
+        <br>
+        <input class="btn btn-primary" type="submit" value="Add the article">
+    </form>
 
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="catchy">Catchy sentence</span>
-                </div>      
-                <input type="text" id="catchy" name="catchy" required>
-            </div><br>
+      <script>
+        ClassicEditor
+            .create( document.querySelector( '#context' ) )
+            .catch( error => {
+                console.error( error );
+            } );
+    </script>
 
-            {{-- <div class="form-group">
-                <div class="input-group">
-                    <div class="input-group-prepend">
-                    <span class="input-group-text">Textual content</span>
-                    </div>
-                <textarea id="context" id="editor" name="context"></textarea> <br>
-            </div><br> --}}
-
-            <textarea id="context" name="context"></textarea>
-            <script>
-                ClassicEditor
-                    .create( document.querySelector( '#context' ) )
-                    .catch( error => {
-                        console.error( error );
-                    } );
-            </script>
-
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="publish">Publish now ?</span>
-                    <div class="input-group-text">
-                        <input type="radio" id="yes" name="publish" value="true" required>
-                        <label for="yes"> Yes</label>
-                    </div>
-                    <div class="input-group-text">
-                        <input type="radio" id="no" name="publish" value="false" required>
-                        <label for="no"> No</label><br>
-                    </div>
-                </div>      
-            
-            </div><br>
-            
-            <input class="btn btn-primary" type="submit" value="Add the article">
-        </form>
-    </div>
-	<p>
+<br><p>
 		Go back to <a href="{{ route('account') }}">Home</a>.
 	</p>
 @endsection

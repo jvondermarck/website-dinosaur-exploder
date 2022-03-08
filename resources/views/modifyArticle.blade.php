@@ -1,29 +1,40 @@
-@extends('layouts.app')
+@extends('layouts.app2')
 
-@section('title','Account')
+@section('title','Modify article')
 
-@section('main')
+@section('body')
 	@parent
-	<form class="form-signin" action=" {{ route('updateArticle') }}" method="post">
-		@csrf
-		<label for="title">Title</label>        
-        <input type="text" id="title" name="title" value="{{ $article->titre }}" required>
+    
+    <form action="{{ route('updateArticle') }}" method="post" style="text-align: center;">
+        @csrf
+        <div class="container align-items-center justify-content-md-center">
+            <div class="row align-items-center justify-content-md-center">
+                <div class="form-group col-sm-6 col-xs-1">
+                    <label for="title">Title :</label>
+                    <input type="text" id="title" name="title" class="form-control" value="{{ $article->titre }}" required>
+                </div>
+                <div class="form-group col-sm-6 col-xs-1">
+                    <label for="catchy">Catchy sentence :</label>
+                    <input type="text" id="catchy" name="catchy" class="form-control" value="{{ $article->phrase }}" required>
+                </div>
+                <div class="form-group col">
+                    <label for="context">Content :</label>
+                    <textarea class="form-control col"  id="context" name="context">{!! $article->contenu !!}</textarea>
+                </div>
+            </div>
+        </div>
+        <br><button type="submit" name="Send" class="btn btn-primary" value={{$article->id}}>Modify the article</button>
+    </form>
 
-		<label for="catchy">Catchy sentence</label>
-        <input type="text" id="catchy" name="catchy" value="{{ $article->phrase }}" required>
+      <script>
+        ClassicEditor
+            .create( document.querySelector( '#context' ) )
+            .catch( error => {
+                console.error( error );
+            } );
+    </script>
 
-        <label for="context">Textuel content</label>
-        <textarea id="context" name="context">{{ $article->contenu }}</textarea> <br>
-
-        <label for="publish">Publish now ?</label>
-        <input type="radio" id="yes" name="publish" value="true" {{ ($article->statut=="1")? "checked" : "" }} required>
-        <label for="yes">Yes</label>
-        <input type="radio" id="no" name="publish" value="false" {{ ($article->statut=="0")? "checked" : "" }} required>
-        <label for="no">No</label><br>
-		
-        <button type="submit" name="Send"  value={{$article->id}}>Modify the article</button>
-	</form>
-	<p>
+	<br><p style="text-align: center;">
 		Go back to <a href="{{ route('account') }}">Home</a>.
 	</p>
 @endsection

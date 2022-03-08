@@ -55,7 +55,9 @@ Route::prefix('admin')->middleware('auth.myuser')->group( function() {
 
 		Route::get('addComment/{id}', [CommentController::class,'addComment'])->name('addComment');
 		Route::post('addOneComment/{id}', [CommentController::class,'addOneComment'])->name('addOneComment');
-
+		Route::get('editComment/{id}/{btn}/{txt}', [CommentController::class,'editComment'])->name('editComment');
+		Route::get('updateComment', [CommentController::class,'updateComment'])->name('updateComment');
+		Route::get('deleteComment', [CommentController::class,'deleteComment'])->name('deleteComment');
 	});
 });
 // ------------------------------------------------------------------------

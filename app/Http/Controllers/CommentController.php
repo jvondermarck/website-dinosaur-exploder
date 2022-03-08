@@ -47,4 +47,50 @@ class CommentController extends Controller
 
         return redirect()->route('getArticleInfoForum', [$idArticle])->with('message','Comment added !.');
     }
+
+    public function editComment(Request $request, $id, $btn, $txt) {
+        switch($btn) {
+            case 'Save': 
+                return $this->updateComment($request, $id, $txt);
+                break;
+            case 'Delete': 
+                return $this->deleteComment($request, $id);
+                break;
+        }
+    }
+
+    public function updateComment(Request $request, $id, $txt) 
+    {
+        $comment = Comment::find($id);
+        $comment->comment = $txt;
+        $comment->last_modif = date('Y-m-d H:i:s');
+    
+        try
+        {
+            $comment->save();
+        }
+        catch (\Illuminate\Database\QueryException $e)
+        {
+            return redirect()->route('getArticleInfoForum', [$comment->article_id])->with('message', $e->getMessage());
+        }
+
+        return redirect()->route('getArticleInfoForum', [$comment->article_id])->with('message','Comment updated !.');
+    }
+
+    public function deleteComment(Request $request, $id)
+    {
+        $comment = Comment::find($id);
+        $article = $comment->article_id;
+        
+        try
+        {
+            $comment->delete();
+        }
+        catch (\Illuminate\Database\QueryException $e)
+        {
+            return redirect()->route('getArticleInfoForum', [$article])->with('message', $e->getMessage());
+        }
+
+        return redirect()->route('getArticleInfoForum', [$article])->with('message','Comment deleted !.');
+    }
 }

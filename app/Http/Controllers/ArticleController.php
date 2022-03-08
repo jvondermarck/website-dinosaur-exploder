@@ -15,7 +15,7 @@ class ArticleController extends Controller
 
     public function addOneArticle( Request $request )
     {
-        if (!$request->filled(['title','catchy','context', 'publish']) )
+        if (!$request->filled(['title','catchy','context']) )
 			return redirect()->route('addarticle')->with('message','Some POST data are missing.');
 
         $article = new Article;
@@ -23,15 +23,7 @@ class ArticleController extends Controller
         $article->titre = $request->title;
         $article->phrase = $request->catchy;
         $article->contenu = $request->context;
-
-        if($request->input('publish') == "true"){
-            $publicated = true;
-          }
-          else{
-            $publicated = false;
-          }
-    
-        $article->statut = $publicated;
+        $article->statut = true;
         $article->last_publi = date('Y-m-d H:i:s');
         $article->last_modif = date('Y-m-d H:i:s');
 
@@ -73,15 +65,7 @@ class ArticleController extends Controller
         $article->titre = $request->title;
         $article->phrase = $request->catchy;
         $article->contenu = $request->context;
-
-        if($request->input('publish') == "true"){
-            $publicated = true;
-          }
-          else{
-            $publicated = false;
-          }
-    
-        $article->statut = $publicated;
+        $article->statut = true;
         $article->last_modif = date('Y-m-d H:i:s');
 
         try

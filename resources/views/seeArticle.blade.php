@@ -14,13 +14,15 @@
 
 @section('article')
 	@foreach ($article as $art)
-			<div class="card" style="width:300px; margin:10px; max-height:300px;" class="row">
+			<div class="card" style="width:300px; margin:10px; max-height:500px;" class="row">
 			<!-- le corps -->
 				<div class="card-body">
 					<h4 class="card-title">{{ $art->titre }}</h4>
 					<!-- le contenu -->
 					<p class="card-text">{{ $art->phrase }}</p>
-					<p class="card-text">{!! $art->contenu !!}</p> 
+					<div class="card-text" style ="min-height: 52px; max-height: 52px; overflow: hidden; margin-bottom: 10px;" >
+						{!! $art->contenu !!}
+					</div>
                     <p class="btn btn-outline-success">Published :
 						@if( $art->statut == 1)
 							Yes
@@ -37,7 +39,7 @@
 							Publish the article
 						@endif
 					</a></p><br>
-					<p class="btn btn-danger"><a style="text-decoration: none; color:white" href="{{ route('deleteArticle', ['id' => $art->id]) }}">Delete articled</a></p>
+					<p class="btn btn-danger"><a style="text-decoration: none; color:white" href="{{ route('deleteArticle', ['id' => $art->id]) }}">Delete article</a></p>
 				</div>
 			</div><br><br>
 	@endforeach 

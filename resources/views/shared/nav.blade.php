@@ -9,7 +9,7 @@
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-   <div class="collapse navbar-collapse w-100 order-1 order-md-0 dual-collapse2" style="margin-left: 40px;" id="navbarSupportedContent">
+   <div class="collapse navbar-collapse w-100 order-1 order-md-0 dual-collapse2" style="" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
           <li class="{{ Route::is('home') ? 'nav-item active font-weight-bold' : 'nav-item' }}">
             <a class="nav-link" href="{{ route('home') }}">Home</a>
@@ -48,11 +48,11 @@
             @endif
             @if(session()->get('user') != null)
               <li class="nav-item">
-                <a class="nav-link text-white" href="{{ route('signout') }}">Sign out</a>
+                <a class="nav-link" href="{{ route('signout') }}" style="color: rgba(255, 255, 255, 0.5);">Sign out</a>
               </li>
             @else 
               <li class="nav-item">
-                <a class="nav-link text-white" href="{{ route('signin') }}">Sign in</a>
+                <a class="nav-link" href="{{ route('signin') }}" style="color: rgba(255, 255, 255, 0.5);">Sign in</a>
               </li>
             @endif
         </ul>
