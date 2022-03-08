@@ -21,6 +21,8 @@ use App\Http\Controllers\CommentController;
 // Route::get('/', [UserController::class,'signin']);
 Route::get('/', function () { return view('home'); })->name('home');
 Route::get('about', function () { return view('about'); })->name('about');
+Route::get('download', function () { return view('download'); })->name('download');
+Route::get('documentation', function () { return view('documentation'); })->name('documentation');
 
 Route::get('signin', [UserController::class,'signin'])->name('signin');
 Route::post('authenticate', [UserController::class,'authenticate'])->name('authenticate');
@@ -53,9 +55,8 @@ Route::prefix('admin')->middleware('auth.myuser')->group( function() {
 		Route::get('onOffPublishing/{id}', [ArticleController::class,'onOffPublishing'])->name('onOffPublishing');
 		Route::get('deleteArticle/{id}', [ArticleController::class,'deleteArticle'])->name('deleteArticle');
 
-		Route::get('addComment/{id}', [CommentController::class,'addComment'])->name('addComment');
 		Route::post('addOneComment/{id}', [CommentController::class,'addOneComment'])->name('addOneComment');
-		Route::get('editComment/{id}/{btn}/{txt}', [CommentController::class,'editComment'])->name('editComment');
+		Route::get('editComment/{id}/{btn}/{txt', [CommentController::class,'editComment'])->name('editComment');
 		Route::get('updateComment', [CommentController::class,'updateComment'])->name('updateComment');
 		Route::get('deleteComment', [CommentController::class,'deleteComment'])->name('deleteComment');
 	});

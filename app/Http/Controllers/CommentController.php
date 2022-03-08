@@ -10,13 +10,6 @@ use App\Models\Comment;
 
 class CommentController extends Controller
 {
-    // return the view
-    public function addComment( Request $request, $id )
-    {
-        $article = Article::findOrFail($id);
-        return view('addComment')->with('article', $article)->with('message',$request->session()->get('message'));;
-    }
-
     public function getArticleInfoForum(Request $request, $id) // get the id of which article we want to modify
     {
         $article = Article::findOrFail($id);

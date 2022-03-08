@@ -22,6 +22,14 @@
           <li class="{{ Route::is('about') ? 'nav-item active font-weight-bold' : 'nav-item' }}">
             <a class="nav-link" href="{{ route('about') }}">About</a>
           </li>
+
+          <li class="{{ Route::is('download') ? 'nav-item active font-weight-bold' : 'nav-item' }}">
+            <a class="nav-link" href="{{ route('download') }}">Download</a>
+          </li>
+
+          <li class="{{ Route::is('documentation') ? 'nav-item active font-weight-bold' : 'nav-item' }}">
+            <a class="nav-link" href="{{ route('documentation') }}">Documentation</a>
+          </li>
       </ul>
     </div>
 
