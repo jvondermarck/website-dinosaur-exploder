@@ -43,7 +43,7 @@ class ArticleController extends Controller
     {
         $article = Article::orderBy('last_publi','desc')->where('statut', '1')->get();
         //session()->put('article', $article);
-        return view('public')->with('article', $article);
+        return view('forum')->with('article', $article);
     }
 
     public function seeArticle(Request $request)

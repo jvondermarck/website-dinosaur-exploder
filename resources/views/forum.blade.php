@@ -1,11 +1,11 @@
 @extends('layouts.app')
 
-@section('title','Article')
+@section('title','Forum')
 
 @section('main')
 	@parent
 	<h5>
-		Welcome to the article page
+		Welcome to the forum page
 	</h5>
 	@if(session()->get('user') == null) 
 		<p>You can signin <a href="{{ route('signin') }}">here</a> to add more article.</p><br>
@@ -33,10 +33,3 @@
 	</div>
 	@endforelse 
 @endsection
-
-<script type="text/javascript">
-   function redirectCard()
-	{
-
-	}
-</script>

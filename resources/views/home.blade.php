@@ -11,7 +11,7 @@
         @include('shared.nav')
     </head>
     <body>
-        <main role="main" style="padding-top: 20px;">
+        <main role="main" style="padding-top: 40px;">
             <section class="jumbotron text-center">
                 <div class="container">
                     <img class="card-img-top" style="width: 15rem;" src="{{ asset('img/background_dino.png') }}" alt="Card image cap">

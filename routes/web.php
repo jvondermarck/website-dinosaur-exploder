@@ -30,8 +30,8 @@ Route::get('signup', [UserController::class,'signup'])->name('signup');
 Route::post('adduser', [UserController::class,'add'])->name('adduser');
 
 
-Route::get('public', [ArticleController::class,'giveLastestArticle'])->name('giveLastestArticle');
-Route::get('getArticleInfoForum/{id}', [CommentController::class,'getArticleInfoForum'])->name('getArticleInfoForum');
+Route::get('forum', [ArticleController::class,'giveLastestArticle'])->name('giveLastestArticle');
+Route::get('article/{id}', [CommentController::class,'getArticleInfoForum'])->name('getArticleInfoForum');
 
 // ------------------------------------------------------------------------
 

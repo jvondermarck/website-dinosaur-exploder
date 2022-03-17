@@ -16,7 +16,7 @@
           </li>
         
           <li class="{{ Route::is('giveLastestArticle') ? 'nav-item active font-weight-bold' : 'nav-item' }}">
-            <a class="nav-link" href="{{ route('giveLastestArticle') }}">Article</a>
+            <a class="nav-link" href="{{ route('giveLastestArticle') }}">Forum</a>
           </li>
 
           <li class="{{ Route::is('about') ? 'nav-item active font-weight-bold' : 'nav-item' }}">
