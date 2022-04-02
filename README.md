@@ -2,15 +2,12 @@
   Dinosaur Exploder Website
 </h1>
 <p align="center">Dinosaur Exploder is a free, open source shoot 'em up video game <br> written in Java using JavaFX and the FXGL game development library 🦖.</p>
+<p align="center">This repository is the website of the main project, written in PHP with the Laravel framework🦖.</p>
 
 <div align="center">
   <img align="center" src="https://img.shields.io/discord/946130675034095667?label=DISCORD&style=for-the-badge">
-  <img align="center" src="https://img.shields.io/github/forks/dylan-power/dinosaur-exploder?style=for-the-badge">
   <img align="center" src="https://img.shields.io/github/contributors/dylan-power/dinosaur-exploder?style=for-the-badge">
-  <br><p></p>
-  <img align="center" src="https://img.shields.io/github/issues/dylan-power/dinosaur-exploder?style=for-the-badge">
   <img align="center" src="https://img.shields.io/github/license/dylan-power/dinosaur-exploder?style=for-the-badge">
-  <img align="center" src="https://img.shields.io/github/workflow/status/dylan-power/dinosaur-exploder/GitHub%20Actions%20Maven%20Build%20-%20Dinosaur%20Exploder?label=BUILD&style=for-the-badge">
  <img >
 </div>
 
