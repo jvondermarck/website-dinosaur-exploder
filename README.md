@@ -64,7 +64,7 @@ DB_PASSWORD=
 
 # ✍️ Licence
 
-> This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/dylan-power/dinosaur-exploder/blob/main/LICENSE) file for details.
+> This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/jvondermarck/website-dinosaur-exploder/blob/main/LICENSE) file for details.
 
 # 👨 Creators
 
