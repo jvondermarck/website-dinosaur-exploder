@@ -48,7 +48,7 @@ DB_PASSWORD=
 
 # 🙏Contributing
 
-> We are very much open to contributions - please read our [code of conduct](https://github.com/dylan-power/dinosaur-exploder/blob/main/CODE_OF_CONDUCT.md) and [contribution guidelines](https://github.com/dylan-power/dinosaur-exploder/blob/main/CONTRIBUTING.md) first.
+> We are very much open to contributions - please read our [code of conduct](https://github.com/jvondermarck/website-dinosaur-exploder/blob/main/CODE_OF_CONDUCT.md) and [contribution guidelines](https://github.com/jvondermarck/website-dinosaur-exploder/blob/main/CONTRIBUTING.md) first.
 
 # 🌍 Support
  
