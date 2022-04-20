@@ -46,10 +46,15 @@
                     <div class="card mb-3">
                         <div class="card-body">
                           <h5 class="card-title">News</h5>
-                          <p class="card-text"><li>Release of Dinosaur-Exploder 1.0.1 [ 2022 March 01 ]</li></p>
-                          <a href="#" class="btn btn-primary">Checkout the releases</a>
+                          <p class="card-text"><li>Release of Dinosaur-Exploder 1.0.1 [ 2022 May ]</li></p>
+                          <a href="https://github.com/dylan-power/dinosaur-exploder/releases" class="btn btn-primary">Checkout the releases</a>
                         </div>
-                      </div>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <video height="600px" controls> 
+                            <source src="{{ URL::asset('video/Clip_Presentation.mp4') }}" type="video/mp4"> 
+                        </video>
+                    </div>
                 </div>
             </div>
         </main>

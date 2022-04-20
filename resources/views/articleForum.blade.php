@@ -27,7 +27,7 @@
         <div class="card-body">
         <p class="card-text">{!! $com->comment !!}</p>
         @if(session()->get('user') != null) 
-            @if(session()->get('user')->login == $com->user_id) 
+            @if(session()->get('user')->login == $com->user_id || session()->get('user')->admin ==1) 
             <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal" data-whatever="{{ $com }}">Edit comment</button>
             
             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
